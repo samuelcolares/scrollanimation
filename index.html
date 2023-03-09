@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação com scroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <h1>Animação com scroll <i class="fa-solid fa-computer-mouse"></i></h1>
+    <div class="infoGrid">
+        <p class="info">
+            Sabe aqueles sites com animação onde o contéudo vai surgindo conforme você vai explorando o site?
+            <br>
+            Pois bem, para explicar vamos levar em principal consideração a <span>viewport</span>, que nada mais é que a
+            área visível do seu dispositivo.
+            <br>
+        </p>
+        <p>A viewport desse dispositivo é de: <span class="viewport"></span></p>
+        <p>No JavaScript existe a propriedade <b>window.innerHeight</b> onde se tem acesso ao tamanho da viewport, com isso
+            podemos atribuir a uma variável para ter xx% da altura da viewport, neste exemplo vamos usar 80%, então,
+            <b>const triggerBottom = window.innerHeight * 0,8</b>.<br>A <span class="blueLine">linha azul</span> ao topo
+            representa o ponto inicial de altura do navegador (0px) e o limite de altura que definimos com javascript está
+            sendo representada por uma <span class="redLine">linha vermelha</span> na tela. Essa linha vermelha representa a
+            distância entre o ponto inicial do navegador (0px) até 80% da altura da viewport.
+        </p>
+        <p>Voltando ao javascript podemos aplicar para cada conteúdo que queremos um método chamado
+            <b>getBoundingClientRect()</b> que tem acesso a propriedades como top, left, right e bottom do conteúdo, ou
+            seja, a distância entre o topo do conteúdo até o ponto inicial do navegador (linha azul) ou a distancia entre a
+            lateral esquerda do conteúdo e a margem esquerda do navegador ou a distância entre a lateral direita do conteúdo
+            e a margem esquerda do navegador e por fim a distância o fim do conteúdo até o ponto inicial do navegador (linha
+            azul), neste exemplo vamos usar o topo do contéudo (<b>getBoundingClientRect().top</b>) e para facilitar a
+            visualização apliquei uma <span class="greenBorder">borda verde ao topo</span>.
+        </p>
+        <p>Agora com um pouco de lógica de programação podemos aplicar um evento de scroll ao window para quando a distancia
+            do ponto incial do navegador (linha azul) e o topo do contéudo (borda verde), for menor que a altura limite
+            (linha vermelha), o conteúdo recebe uma classe que com CSS podemos torná-lo visível. </p>
+     
+    </div>
+
+    <div class="box">
+        <p></p>
+        <h2 class="box-content notion"><a href="https://samuelcolares.notion.site/Anima-o-com-Scroll-45bb50c5bb24496f8ccb0e0fd1c00d63">RESUMO NOTION <i class="fa-solid fa-file"></i></a></h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content github"><a href="https://github.com/samuelcolares">GitHub <i class="fa-brands fa-github"></i></a></h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="box">
+        <p></p>
+        <h2 class="box-content">conteúdo</h2>
+    </div>
+    <div class="limitLine">
+        <p class="limitLineContent"></p>
+        <p class="limitLineContent"></p>
+        <p class="limitLineContent">Use o Scroll para ver a animação</p>
+    </div>
+    <div class="backgroundLimit"></div>
+</body>
+
+</html>
